@@ -1,5 +1,6 @@
 'use client';
 import clsx from 'clsx'
+import { off } from 'process';
 import React from 'react'
 import {FieldErrors,FieldValues, SubmitHandler, UseFormRegister} from 'react-hook-form'
 
@@ -33,7 +34,7 @@ export const Input:React.FC<InputProps> = ({
         <input
         id={id}
         type={type}
-        autoComplete={id}
+        autoComplete='off'
         disabled={disabled}
         {...register(id,{required})}
         className={clsx(`

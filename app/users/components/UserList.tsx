@@ -1,8 +1,7 @@
 'use client';
 import { User } from '@prisma/client';
 import React from 'react';
-import { UserBox } from './UserBox';
-
+import UserBox from './UserBox';
 
 interface UserListProps{
   items:User[];
