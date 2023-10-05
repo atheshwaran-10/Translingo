@@ -16,7 +16,6 @@ export const DesktopSidebar:React.FC<DesktopSidebarProps> = ({
 }) => {
   const routes=useRoutes();
   const [isOpen,SetIsOpen]=useState(false);
-  console.log(currentUser)
   return (
     <>
     <SettingsModal

@@ -2,6 +2,7 @@
 import React from 'react'
 import clsx from 'clsx'
 import Link from 'next/link'
+import SettingsModal from './SettingsModal';
 
 interface MobileItemProps{
   icon:any,
