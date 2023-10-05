@@ -9,6 +9,7 @@ import { FullMessageType } from "@/app/types";
 
 import {Avatar} from "@/app/components/Avatar";
 import ImageModal from "./ImageModal";
+import axios from "axios";
 
 interface MessageBoxProps {
   data: FullMessageType;
@@ -21,6 +22,8 @@ const MessageBox: React.FC<MessageBoxProps> = ({
 }) => {
   const session = useSession();
   const [imageModalOpen, setImageModalOpen] = useState(false);
+  const [viewData,setViewData]=useState(data.body);
+  const [clicked,setClicked]=useState(false);
 
   const isOwn = session.data?.user?.email === data?.sender?.email
   const seenList = (data.seen || [])
@@ -30,12 +33,27 @@ const MessageBox: React.FC<MessageBoxProps> = ({
 
   const container = clsx('flex gap-3 p-4', isOwn && 'justify-end');
   const avatar = clsx(isOwn && 'order-2');
-  const body = clsx('flex flex-col gap-2', isOwn && 'items-end');
+  const body = clsx('flex flex-col gap-2 ', isOwn && 'items-end');
   const message = clsx(
     'text-sm w-fit overflow-hidden',
     isOwn ? 'bg-sky-500 text-white' : 'bg-gray-100',
     data.image ? 'rounded-md p-0' : 'rounded-full py-2 px-3'
   );
+  const handleClick=async ()=>{
+    if(!clicked)
+    {
+      console.log(data.body);
+      const response=await axios.post("/api/translate",{ body: data.body});
+      setViewData(response.data);
+      setClicked(true);
+    }
+    else{
+      setViewData(data.body);
+      setClicked(false);
+    }
+   
+    
+  }
 
   return (
     <div className={container}>
@@ -69,7 +87,9 @@ const MessageBox: React.FC<MessageBoxProps> = ({
               "
             />
           ) : (
-            <div>{data.body}</div>
+            <div className="cursor-pointer" onClick={handleClick}>
+              {viewData}
+            </div>
           )}
         </div>
         {isLast && isOwn && seenList.length > 0 && (

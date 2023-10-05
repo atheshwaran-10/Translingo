@@ -21,6 +21,7 @@
     "autoprefixer": "10.4.15",
     "axios": "^1.5.0",
     "bcrypt": "^5.1.1",
+    "bing-translate-api": "^2.9.1",
     "clsx": "^2.0.0",
     "data-fns": "^1.1.0",
     "date-fns": "^2.30.0",
