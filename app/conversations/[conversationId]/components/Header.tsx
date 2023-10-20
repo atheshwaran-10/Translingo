@@ -82,7 +82,7 @@ const Header: React.FC<HeaderProps> = ({ conversation }) => {
           </div>
         </div>
         <HiEllipsisHorizontal
-          size={32}
+          size={31}
           onClick={() => setDrawerOpen(true)}
           className="
           text-sky-500

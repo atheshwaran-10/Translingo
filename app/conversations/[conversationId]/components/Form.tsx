@@ -39,6 +39,7 @@ const Form = () => {
   }
 
   const handleUpload = (result: any) => {
+    console.log("result="+result.info.secure_url)
     axios.post('/api/messages', {
       image: result.info.secure_url,
       conversationId: conversationId
