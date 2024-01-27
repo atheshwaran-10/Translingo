@@ -1,34 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center" id="title">Translingo</h1>
 
-## Getting Started
+<p align="center"><img src="https://i.ibb.co/0XqvJCn/translingo.png" alt="project-image"></p>
 
-First, run the development server:
+<p id="description">Translingo your new go-to chat app that's all about making conversations a breeze. Built on Next.js Translingo goes beyond the basics throwing in cool features to keep your chats lively and connected through real time translation.</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+<p align="center"><img src="https://img.shields.io/badge/Next.Js-black?style=flat&amp;labelColor=black%20blue" alt="shields"><img src="https://img.shields.io/badge/RealTimeCommunication-blue?style=flat&amp;labelColor=black%20blue" alt="shields"><img src="https://img.shields.io/badge/NextAuth-orange?style=flat&amp;labelColor=black%20blue" alt="shields"><img src="https://img.shields.io/badge/Prisma-white?style=flat&amp;labelColor=black%20blue" alt="shields"></p>
+
+<h2>🚀 Demo</h2>
+
+[https://shorturl.at/egwzV](https://shorturl.at/egwzV)
+
+  
+  
+<h2>🧐 Features</h2>
+
+Here're some of the project's best features:
+
+*   Real Time Communication
+*   Live Translation Support
+*   Image Sharing Support
+*   Next-Auth
+*   Peer Group Communication
+
+<h2>🛠️ Installation Steps:</h2>
+
+<p>1. Clone the Repo</p>
+
+```
+git clone https://github.com/atheshwaran-10/Translingo.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p>2. Enter the Project Directory</p>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+cd Translingo
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<p>3. Install the dependencies</p>
 
-## Learn More
+```
+npm i
+```
 
-To learn more about Next.js, take a look at the following resources:
+<p>4. Add the Environmental Variables</p>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=
+DATABASE_URL=
+NEXTAUTH_SECRET=
+GITHUB_ID=
+GITHUB_SECRET=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+NEXT_PUBLIC_PUSHER_APP_KEY=
+PUSHER_APP_ID=
+PUSHER_SECRET=
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<p>5. Run the App in development server</p>
 
-## Deploy on Vercel
+```
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  
+  
+<h2>💻 Built with</h2>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Technologies used in the project:
+
+*   Next.Js
+*   TypeScript
+*   Tailwind
+*   Pusher.js
+*   Prisma
