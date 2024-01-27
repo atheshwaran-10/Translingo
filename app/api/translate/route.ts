@@ -15,7 +15,8 @@ export async function POST(request: Request) {
     {
       return new NextResponse('Translation not found', { status: 404 });
     }
-  } catch (err) {
+  } 
+  catch (err) {
     console.error(err);
     return new NextResponse('Internal error', { status: 500 });
   }

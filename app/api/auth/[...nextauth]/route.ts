@@ -7,7 +7,9 @@ import { PrismaAdapter } from "@next-auth/prisma-adapter"
 
 import prisma from "@/app/libs/prismadb"
 
-export const authOptions: AuthOptions = {
+export const authOptions: AuthOptions = 
+{
+  
   adapter: PrismaAdapter(prisma),
   providers: [
     GithubProvider({
@@ -22,7 +24,7 @@ export const authOptions: AuthOptions = {
       name: 'credentials',
       credentials: {
         email: { label: 'email', type: 'text' },
-        password: { label: 'password', type: 'password' }
+        password: { label: 'password', type: 'password'}
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
